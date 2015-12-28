@@ -29,8 +29,8 @@ def import_songs(file_name):
     songslist = songslist.split('\n')
     songs = []
     for song in songslist:
-         name, artist, album, position, year, duration = song.split('\t')
-         songs.append(Song(artist, name, album, position, year, duration))
+        name, artist, album, position, year, duration = song.split('\t')
+        songs.append(Song(artist, name, album, position, year, duration))
     return(songs)
 
 songs = import_songs('songs1.txt')
