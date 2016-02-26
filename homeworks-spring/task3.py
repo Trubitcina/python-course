@@ -16,6 +16,3 @@ class fibonacci_sequence:
             return a
         else:
             raise StopIteration
-
-for i in fibonacci_sequence(10):
-    print(i)
