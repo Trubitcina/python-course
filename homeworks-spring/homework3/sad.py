@@ -17,8 +17,7 @@ parser.add_argument("command",
 
 parser.add_argument("path",
                     type=str,
-                    help="Gimme the path to your file or folder!"
-                    "I can't work with folders yet")
+                    help="Gimme the path to your file or folder!")
 
 args = parser.parse_args()
 command = args.command
