@@ -25,17 +25,18 @@ command = args.command
 path = args.path
 
 
-sad_home = "/home/nina/sad"
-new_sad = '/home/nina/sad/' + path
+sad = "/home/nina/PycharmProjects/classwork4/sad/"
 
-if os.path.exists(sad_home) == False:
+if os.path.exists(sad) == False:
     os.mkdir("sad")
 
 if command == "store":
     if os.path.isfile(path):
-        shutil.copy(path, sad_home)
+        shutil.copy(path, sad)
+        print("Сделяль")
     if os.path.isdir(path):
-        shutil.copytree(path, sad_home)
+        shutil.copytree(path, sad + path)
+        print("Сделяль")
 
 if command == "diff":
-    subprocess.Popen(["diff", new_sad, sad_home])
+    subprocess.Popen(["diff", sad + path, path])
